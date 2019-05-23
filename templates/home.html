@@ -21,16 +21,6 @@
 	</style>
 
 
-	<!-- No caching -->
-	<meta http-equiv="Pragma" content="no-cache" />
-
-	<script type="text/javascript">
-		 $(document).ready(function() {
-		 var url = “imgs/logo_animated.svg?rnd=”+Math.random();
-		 $(‘#mainLogo’).attr(“src”,url);
-		 });
-	</script>
-
 	</head>
 
 
@@ -41,22 +31,30 @@
 	<h1>Democracy Is Near</h1>
 </div>
 
-<nav class="navbar navbar-light bg-light">
-        <a class="nav-link" href="/citizen_response">Citizen Response</a>
-        <a class="nav-link" href="/minister_response">Minister Response</a>
+<nav class="navbar navbar-light bg-light navbar-expand-lg">
+	    <div class="navbar-nav">
+	        <a class="nav-item nav-link" href="/citizen_response">Citizen Response</a>
+	        <a class="nav-item nav-link" href="/minister_response">Minister Response</a>
+	    </div>
 
 </nav>
 
 <div id="visualization_bar" class="container">
 	<div class="row">
 		<div id="citizen_viz" class="col-lg-6">
+			<br><br><br>
+
+			<b><center>Citizen Voice</center></b>
 		
-			<img src="{{url_for('static', filename='citizen.png')}}?rnd={{random1}}">
+			<img src="{{url_for('static', filename='citizen.png')}}?rnd={{random1}}" style="width:100%">
 			
 		</div>
 		<div id="political_viz" class="col-lg-6">
+			<br><br><br>
 
-			<img src="{{url_for('static', filename='government.png')}}?rnd={{random2}}">
+			<b><center>Minister Voice</center></b>
+
+			<img src="{{url_for('static', filename='government.png')}}?rnd={{random2}}" style="width:100%">
 
 		</div>
 	</div>
