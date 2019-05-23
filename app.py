@@ -35,7 +35,7 @@ def makeImage(text, filename='default.png'):
     # show
     plt.imshow(wc, interpolation="bilinear")
     plt.axis("off")
-    plt.savefig(filename, dpi=300)
+    plt.savefig(filename, dpi=100)
 
 
 
